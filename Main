@@ -8,7 +8,7 @@ public class main {
 		boolean Game = true;
 		Scanner in = new Scanner(System.in);
 		
-		System.out.println("Bomb Defuser v 0.1");
+		System.out.println("Bomb Defuser v 0.2a");
 		
 		while(Game == true)
 		{
@@ -17,28 +17,32 @@ public class main {
 			
 			System.out.println("Please enter the module name (no caps):");
 			ModuleType = in.nextLine();
+			if(ModuleType.isEmpty())
+			{
+				ModuleType = in.nextLine();
+			}
 			System.out.println("You typed '" + ModuleType + "'");
 			
 			switch (ModuleType) 
 			{
-				case "Hi":	System.out.println("Hey");
-							break;
-				default:	System.out.println("you wot m80?");
-							break;
+				case "wires":	System.out.println("Begin Wires module...");
+								System.out.println("How many wires are there?");
+								int wirenum = in.nextInt();
+								if(wirenum!=3 && wirenum!=4 && wirenum!=5 && wirenum!=6)
+								{
+									System.out.println("that is in valid exiting...");
+									break;
+								}
+								System.out.println("you entered " + wirenum);
+								Wires wire = new Wires(wirenum);
+								wire.SolveWires();
+								break;
+				default:		System.out.println("you wot m80?");
+								break;
 				
 			}
 			
-			
-			
-			
-			
-			
 		}
-		   
-		
-		
-		
-		// TODO Auto-generated method stub
 
 	}
 
