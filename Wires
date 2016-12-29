@@ -1,0 +1,43 @@
+package GameSolver;
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Wires 
+{
+	public int WireNum;
+	public String YN;
+	Scanner win = new Scanner(System.in);
+	
+	public Wires(int Wires)
+	{
+		
+		WireNum = Wires;
+		
+	}
+	
+	public void SolveWires()
+	{
+		System.out.println("Wires Solver v 0.1");
+		switcher:
+		switch (WireNum)
+		{
+		
+		case 3:	System.out.println("Are there 0 red wires?");
+				YN = win.nextLine();
+				System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					
+					System.out.println("Cut the second wire.");
+					break switcher;
+				}
+				System.out.println("There are red wires.");
+		default:
+				break;
+		
+		}
+		
+		
+		
+	}
+}
