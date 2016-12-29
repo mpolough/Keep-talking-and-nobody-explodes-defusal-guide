@@ -1,0 +1,45 @@
+package GameSolver;
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) 
+	{
+		boolean Game = true;
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Bomb Defuser v 0.1");
+		
+		while(Game == true)
+		{
+			
+			String ModuleType;
+			
+			System.out.println("Please enter the module name (no caps):");
+			ModuleType = in.nextLine();
+			System.out.println("You typed '" + ModuleType + "'");
+			
+			switch (ModuleType) 
+			{
+				case "Hi":	System.out.println("Hey");
+							break;
+				default:	System.out.println("you wot m80?");
+							break;
+				
+			}
+			
+			
+			
+			
+			
+			
+		}
+		   
+		
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
