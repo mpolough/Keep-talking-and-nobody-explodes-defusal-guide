@@ -8,7 +8,7 @@ public class main {
 		boolean Game = true;
 		Scanner in = new Scanner(System.in);
 		
-		System.out.println("Bomb Defuser v 0.2a");
+		System.out.println("Bomb Defuser v 0.2b");
 		
 		while(Game == true)
 		{
@@ -30,7 +30,7 @@ public class main {
 								int wirenum = in.nextInt();
 								if(wirenum!=3 && wirenum!=4 && wirenum!=5 && wirenum!=6)
 								{
-									System.out.println("that is in valid exiting...");
+									System.out.println("that is invalid exiting...");
 									break;
 								}
 								System.out.println("you entered " + wirenum);
