@@ -17,22 +17,131 @@ public class Wires
 	
 	public void SolveWires()
 	{
-		System.out.println("Wires Solver v 0.1");
+		System.out.println("Wires Solver v 0.2");
 		switcher:
 		switch (WireNum)
 		{
 		
 		case 3:	System.out.println("Are there 0 red wires?");
 				YN = win.nextLine();
-				System.out.println("you typed: " + YN);
+				//System.out.println("you typed: " + YN);
 				if(YN.equals("yes"))
 				{
 					
 					System.out.println("Cut the second wire.");
 					break switcher;
 				}
-				System.out.println("There are red wires.");
+				System.out.println("Is the last wire white?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					
+					System.out.println("Cut the last wire.");
+					break switcher;
+				}
+				System.out.println("Is there more than one blue wire?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					
+					System.out.println("Cut the last blue wire.");
+					break switcher;
+				}
+				System.out.println("Cut the last wire.");
+				break;
+				
+		case 4: System.out.println("Is there more than one red wire, and is the last digit of the serial number odd?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the last red wire.");
+					break switcher;
+				}
+				System.out.println("Is the last wire yellow, and are there no red wires?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the first wire.");
+					break switcher;
+				}
+				System.out.println("Is there exactly one blue wire?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the first wire.");
+					break switcher;
+				}
+				System.out.println("Is there more than one yellow wire?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the last wire.");
+					break switcher;
+				}
+				System.out.println("Cut the second wire.");
+				break;
+				
+		case 5:	System.out.println("Is the last wire black, and is the last digit of the serial nuber odd?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the fourth wire.");
+					break switcher;
+				}
+				System.out.println("Is there only one red wire, and is there more than one yellow wire?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the first wire.");
+					break switcher;
+				}
+				System.out.println("Are there no black wires?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the second wire.");
+					break switcher;
+				}
+				System.out.println("Cut the first wire.");
+				break;
+		case 6:
+				System.out.println("Are there no yellow wires, and is the last digit of the serial nuber odd?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the third wire.");
+					break switcher;
+				}
+				System.out.println("Is there exactly one yellow wire, and is there more than one white wire?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the fourth wire.");
+					break switcher;
+				}
+				System.out.println("Are there no red wires?");
+				YN = win.nextLine();
+				//System.out.println("you typed: " + YN);
+				if(YN.equals("yes"))
+				{
+					System.out.println("Cut the last wire.");
+					break switcher;
+				}
+				System.out.println("Cut the fourth wire.");
+				break;
 		default:
+				System.out.println("BROKEN");
 				break;
 		
 		}
